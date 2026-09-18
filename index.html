@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Card Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow"></div>
+
+    <main class="game-container">
+
+        <!-- HEADER -->
+        <header class="game-header">
+            <div>
+                <p class="subtitle">BRAIN TRAINING</p>
+                <h1>MEMORY <span>CARD GAME</span></h1>
+            </div>
+
+            <button class="restart-btn" onclick="restartGame()">
+                ↻ Qayta boshlash
+            </button>
+        </header>
+
+
+        <!-- STATISTICS -->
+        <section class="stats">
+
+            <div class="stat-box">
+                <div class="stat-icon">⏱</div>
+                <div>
+                    <small>VAQT</small>
+                    <strong id="timer">00:00</strong>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">👣</div>
+                <div>
+                    <small>YURISHLAR</small>
+                    <strong id="moves">0</strong>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">★</div>
+                <div>
+                    <small>BALL</small>
+                    <strong id="score">1000</strong>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon">✓</div>
+                <div>
+                    <small>TOPILDI</small>
+                    <strong id="matches">0 / 8</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- GAME BOARD -->
+        <section class="game-board" id="gameBoard"></section>
+
+
+        <!-- INSTRUCTION -->
+        <div class="instruction">
+            <span>🧠</span>
+            Bir xil belgilarni toping va barcha juftliklarni oching.
+        </div>
+
+    </main>
+
+
+    <!-- WIN MODAL -->
+    <div class="modal" id="winModal">
+
+        <div class="modal-content">
+
+            <div class="win-icon">🏆</div>
+
+            <p class="subtitle">TABRIKLAYMIZ!</p>
+
+            <h2>O‘YIN YAKUNLANDI</h2>
+
+            <p class="win-text">
+                Siz barcha juftliklarni muvaffaqiyatli topdingiz!
+            </p>
+
+            <div class="final-stats">
+
+                <div>
+                    <span>Vaqt</span>
+                    <strong id="finalTime">00:00</strong>
+                </div>
+
+                <div>
+                    <span>Yurishlar</span>
+                    <strong id="finalMoves">0</strong>
+                </div>
+
+                <div>
+                    <span>Ball</span>
+                    <strong id="finalScore">0</strong>
+                </div>
+
+            </div>
+
+            <button class="play-again" onclick="restartGame()">
+                Yana o‘ynash
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
